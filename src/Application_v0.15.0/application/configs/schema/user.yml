@@ -1,0 +1,191 @@
+Ademe_Model_User:
+  actAs:
+    Timestampable:
+  tableName: user
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    password:
+      type: char(40)
+    nom:
+      type: string(64)
+    prenom:
+      type: string(64)
+    telephone:
+      type: string(20)
+    email:
+      type: string(100)
+      notnull: true    
+    fonction:
+      type: string(64)
+    enabled:
+      type: boolean
+      notnull: true
+      default: 1
+    en_attente:
+      type: boolean
+      notnull: true
+      default: 1
+    last_connection:
+      type: timestamp
+    last_connection_tmp:
+      type: timestamp
+    preferences:
+      type: clob(65535)
+    consentement:
+      type: boolean
+      notnull: true
+      default: 0
+    date_rgpd:
+      type: date
+      notnull: true
+  indexes:
+    email_UNIQUE:
+      fields: [email]
+      type: unique
+  relations:
+    Profils:
+      class: Ademe_Model_AuthProfil
+      local: user_id
+      foreign: auth_profil_id
+      refClass: Ademe_Model_UserAuthProfil
+  options:
+    charset: utf8
+    type: InnoDB
+
+Ademe_Model_UserAuthProfil:
+  tableName: user_auth_profil
+  columns:
+    user_id:
+      type: integer(4)
+      primary: true
+      notnull: true
+    auth_profil_id:
+      type: integer(4)
+      primary: true
+      notnull: true
+  relations:
+    User:
+      class: Ademe_Model_User
+      local: user_id
+      foreign: id
+      foreignAlias: UserAuthProfils
+      onDelete: no action
+      onUpdate: no action
+    AuthProfil:
+      class: Ademe_Model_AuthProfil
+      local: auth_profil_id
+      foreign: id
+      foreignAlias: UserAuthProfils
+      onDelete: no action
+      onUpdate: no action
+  indexes:
+    fk_user_auth_profil_auth_profil1:
+      fields: [auth_profil_id]
+    fk_user_auth_profil_user1:
+      fields: [user_id]
+  options:
+    charset: utf8
+    type: InnoDB
+
+Ademe_Model_UserToken:
+  actAs:
+    Timestampable:
+  tableName: user_token
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    token:
+      type: char(32)
+    expire_at:
+      type: timestamp
+    user_id:
+      type: integer(4)
+      notnull: true
+    url:
+      type: string(100)
+  relations:
+    User:
+      class: Ademe_Model_User
+      local: user_id
+      foreign: id
+      foreignAlias: UserTokens
+      onDelete: cascade
+      onUpdate: no action
+  indexes:
+    fk_user_token_user1:
+      fields: [user_id]
+  options:
+    charset: utf8
+    type: InnoDB
+
+Ademe_Model_UserProfilEdit:
+  tableName: user_profil_edit
+  columns:
+    user_id:
+      type: integer(4)
+      primary: true
+      notnull: true
+    auth_profil_id:
+      type: integer(4)
+      primary: true
+      notnull: true
+    date_modification:
+      type: date
+      notnull: true
+    commentaire:
+      type: clob(65535)
+      notnull: true
+    new_email:
+      type: string(100)
+    etablissement_id:
+      type: integer(4)
+    structure_id:
+      type: integer(4)
+  relations:
+    User:
+      class: Ademe_Model_User
+      local: user_id
+      foreign: id
+      foreignAlias: UserProfilEdit
+      onDelete: no action
+      onUpdate: no action
+    AuthProfil:
+      class: Ademe_Model_AuthProfil
+      local: auth_profil_id
+      foreign: id
+      foreignAlias: UserProfilEdit
+      onDelete: no action
+      onUpdate: no action
+    Etablissement:
+      class: Ademe_Model_Etablissement
+      local: etablissement_id
+      foreign: id
+      foreignAlias: UserProfilEdit
+      onDelete: no action
+      onUpdate: no action
+    Structure:
+      class: Ademe_Model_Structure
+      local: structure_id
+      foreign: id
+      foreignAlias: UserProfilEdit
+      onDelete: no action
+      onUpdate: no action
+  indexes:
+    fk_user_profil_edit_user1:
+      fields: [user_id]
+    fk_user_profil_edit_auth_profil1:
+      fields: [auth_profil_id]
+    fk_user_profil_edit_etablissement1:
+      fields: [etablissement_id]
+    fk_user_profil_edit_structure1:
+      fields: [structure_id]
+  options:
+    charset: utf8
+    type: InnoDB

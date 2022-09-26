@@ -1,0 +1,10 @@
+Bonjour,
+
+L’utilisateur %s %s a refusé la RGPD. Voici une liste d’action à réaliser :
+- Lui renvoyer un mail d’explication et ce que cela implique
+- Vérifier qu’il n’a pas fait d’erreur
+- Si ce n’est pas une erreur mettre les dossiers en « Exclu de la démarche » et confirmer cela à l’entreprise
+
+%s
+
+%s

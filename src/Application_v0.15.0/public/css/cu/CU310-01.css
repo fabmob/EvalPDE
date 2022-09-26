@@ -1,0 +1,324 @@
+#contenu form {
+    margin-top: 30px;
+}
+
+#informations_generales {
+    padding-left: 50px;
+    margin-bottom: 50px;
+}
+
+#structure {
+    padding-left: 50px;
+}
+
+#contenu .bloc_champs label {
+    display: block;
+    margin-left: 5px;
+}
+
+#contenu .champs label {
+    display: block;
+    margin-left: 5px;
+}
+
+.bloc_champs {
+    float: left;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+.champs {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+.decorator-adresse-wrapper {
+    margin-bottom: 50px;
+    padding-left: 50px;
+}
+
+.adresse-wrapper-title {
+    margin-left: 55px;
+}
+
+.champs_adresse {
+    margin-left: 50px;
+    margin-bottom: 15px;
+    float: left;
+}
+#adresse_voie {
+    width: 300px;
+    float: left;
+    margin-left: 10px;
+}
+
+.champs_adresse_voie label {
+    margin-left: 105px;
+} 
+
+#contenu .champs_adresse label {
+    display: block;
+    margin-left: 5px;
+}
+
+#contenu .champs_adresse input {
+    width: 30px;
+}
+
+.champs_code_postal {
+    margin-left: 50px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    float: left;
+}
+
+#contenu .champs_code_postal label {
+    display: block;
+    margin-left: 5px;
+}
+
+#contenu .champs_commune label {
+    display: block;
+    margin-left: 5px;
+}
+
+#description_commune {
+    width: 380px;
+    font-style: italic;
+    display: none;
+}
+
+.champs_activite {
+    margin-left: 50px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+#contenu .champs_activite label {
+    display: block;
+    margin-left: 5px;
+}
+
+.champs_siret {
+    margin-left: 50px;
+    margin-right: 50px;
+    float: left;
+}
+
+#contenu .champs_siret label {
+    display: block;
+    margin-left: 5px;
+}
+
+.champs_structure_juridique {
+    margin-left: 50px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+#contenu .champs_structure_juridique label {
+    display: block;
+    margin-left: 5px;
+}
+
+.champs_date_entree {
+    margin-left: 50px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    float: left;
+}
+
+#contenu .champs_date_entree label {
+    display: block;
+    margin-left: 5px;
+}
+
+.bloc_champs input#nom {
+    width: 300px;
+}
+
+.bloc_champs input#prenom {
+    width: 300px;
+}
+
+.bloc_champs input#telephone {
+    width: 300px;
+}
+
+.bloc_champs input#fonction {
+    width: 300px;
+}
+
+.champs input#mail {
+    width: 400px;
+}
+
+.champs input#nom_etablissement {
+    width: 300px;
+}
+
+#nom_etablissement-image {
+	margin-left: 5px;
+}
+
+input#adresse_voie {
+    width: 300px;
+}
+
+.champs_code_postal input#code_postal {
+    width: 75px;
+}
+
+#commune {
+    width: 245px;
+}
+
+.champs_activite input#activie {
+    width: 120px;
+}
+
+.champs_siret input#siret {
+    width: 300px;
+}
+
+.champs_effectif {
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+#contenu .champs_effectif label {
+    display: block;
+    margin-left: 5px;
+}
+
+.champs_effectif input#effectif {
+    width: 80px;
+    margin-right: 5px;
+}
+
+.champs_effectif .aide-contextuelle-message {
+    width: 500px;
+    display: block;
+    font-style: italic;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.champs_structure_juridique select#structure_juridique {
+    width: 500px;
+}
+
+.champs_date_entree input#date_entree {
+    width: 100px;
+}
+
+.champs_nom_demarche input#nom_demarche {
+    width: 250px;
+}
+
+.description_champ {
+    width: 380px;
+}
+
+#description_naf {
+    width: 380px;
+    font-style: italic;
+    display: inline;
+}
+
+#adresse_voie {
+    float: left;
+	margin-top: 0px;
+}
+
+.champs .aide-contextuelle-message {
+    display: block;
+    font-style: italic;
+    width: 400px;
+    margin-top: 5px;
+}
+
+#mot_de_passe {
+	padding-left: 50px;
+    margin-bottom: 50px;
+}
+
+#mot_de_passe label{
+    display: block;
+    margin-left: 5px;
+}
+
+.champs_mdp1 {
+    margin-left: 50px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+.champs_mdp1 .aide-contextuelle-message {
+    font-style: italic;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.champs_mdp2 {
+    margin-left: 50px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+.champs_mdp2 .aide-contextuelle-message {
+    width: 500px;
+    display: block;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+#rgpd {
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: 15px;
+}
+
+#rgpd .champs {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+#rgpd #consentement-label, #rgpd label, #rgpd .champs, #rgpd .champs label {
+    display: inline-block;
+}
+
+#rgpd .clear, #rgpd .champs br {
+    display: none;
+}
+
+#rgpd input{
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+.champs_commentaire .aide-contextuelle-message {
+    width: 600px;
+    display: block;
+    font-style: italic;
+    margin-top: 15px;
+}
+#zone_commentaire {
+    padding-left: 100px;
+    margin-bottom: 50px;
+}
+
+#zone_commentaire textarea {
+	width: 500px;
+	height: 100px;
+}
+
+#contenu .bouton-cancel {
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 600px;
+}
